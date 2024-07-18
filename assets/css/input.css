@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+      body{
+        font-family: "Poppins", sans-serif;
+      }
+    /* custom css */
+    .main{
+        @apply container mx-auto px-10;
+    }
+    .inBetween{
+        @apply flex items-center justify-between;
+    }
+    .inCenter{
+        @apply flex items-center justify-center
+    }
+
+    .gc-2{
+        @apply grid lg:grid-cols-2
+    }
+    .gc-3{
+        @apply grid lg:grid-cols-3
+    }
+    .gc-4{
+        @apply grid lg:grid-cols-4
+    }
+    .gc-5{
+        @apply grid lg:grid-cols-3
+    }
+    .gc-6{
+        @apply grid lg:grid-cols-3
+    }
+    .card{
+        @apply w-1/3 h-[250px] bg-gray-300 p-5;
+    }
+    .old-price {
+        text-decoration: line-through;
+        color: rgb(164, 160, 160);
+    }
+}
+
+
+
+
+  
