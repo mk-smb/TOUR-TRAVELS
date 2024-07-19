@@ -2,29 +2,303 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tour & Travels</title>
-    <!-- Google-fonts = "Poppins" -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <!-- Fontawesome 6.5.2 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <!-- Owl-carousel 2.3.4 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-    <!-- Custom -->
-    <link rel="stylesheet" href="assets/css/output.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tour & Travels</title>
+  <!-- Google-fonts = "Poppins" -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <!-- Fontawesome 6.5.2 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <!-- Owl-carousel 2.3.4 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+  <!-- Custom -->
+  <link rel="stylesheet" href="assets/css/output.css">
 </head>
-<body>
-  
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <script src="assets/js/main.js"></script>
+<body>
+  <!-- navbar & topbar -->
+  <header>
+    <div class="border-b">
+      <div class="container flex justify-between text-gray-500 text-[14px] py-5 relative">
+        <span class="h-[1px] w-[82px] bg-gray-200 rotate-90 absolute left-[76.5%]"></span>
+        <ul class="flex space-x-5">
+          <li>
+            <i class="fas fa-phone fa-sm me-2"></i>
+            1.820.3345.33
+          </li>
+          <li>
+            <i class="far fa-envelope fa-sm me-2"></i>
+            Contact@TravelTourWP.com
+          </li>
+        </ul>
+        <div class="flex justify-center">
+          <ul class="flex space-x-4 me-16">
+            <li>
+              <a href="#">
+                <i class="fab fa-facebook-f fa-sm"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fab fa-instagram fa-sm"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fab fa-x-twitter fa-sm"></i>
+              </a>
+            </li>
+          </ul>
+          <ul class="flex space-x-4">
+            <li>
+              <a href="#">
+                <i class="fas fa-lock fa-sm me-2"></i>
+                <b>Login</b>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fas fa-user fa-sm me-2"></i>
+                <b>Sign Up</b>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <nav class="py-1">
+      <div class="container inBetween items-center">
+        <div class="logo w-[180px] h-[90px] pb-2">
+          <img src="assets/images/logo-v3.png" alt="" class="w-full h-full object-contain">
+        </div>
+        <ul class="flex items-center space-x-10 font-semibold text-gray-400 uppercase text-sm">
+          <li class="text-black pb-2 border-b-2">
+            <a href="#">Home</a>
+          </li>
+          <li class="pb-2 hover:border-b-2 hover:text-black">
+            <a href="#">pages</a>
+          </li>
+          <li class="pb-2 hover:border-b-2 hover:text-black">
+            <a href="#">tour list</a>
+          </li>
+          <li class="pb-2 hover:border-b-2 hover:text-black">
+            <a href="#">tour search</a>
+          </li>
+          <li class="pb-2 hover:border-b-2 hover:text-black">
+            <a href="#">destinations</a>
+          </li>
+          <li class="pb-2 hover:border-b-2 hover:text-black">
+            <a href="#">date & pricing</a>
+          </li>
+          <li class="pb-2 hover:border-b-2 hover:text-black">
+            <a href="#">Blog</a>
+          </li>
+          <li class="pb-2 text-black">
+            <i class="fas fa-search"></i>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- banner & its content -->
+  <section class="w-full h-[500px] relative"
+    style="background-image: url('assets/images/bgtravel.jpg');background-size: cover;background-repeat: no-repeat;background-attachment: fixed;">
+    <div class="absolute text-center top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2">
+      <h1 class="text-white uppercase text-5xl font-bold mb-5 tracking-wider">find next place to visit</h1>
+      <p class="text-white uppercase text-lg font-medium mb-14 tracking-wider">discover amazing places at exclusive
+        deals</p>
+      <ul class="flex space-x-1">
+        <li>
+          <input type="text" placeholder="Keywords" class="py-5 px-3">
+        </li>
+        <li>
+          <select name="destination_for_travel" id="" class="outline-none py-5 px-5">
+            <option value="Destination">Destination</option>
+            <option value="Africa Adventure">Africa Adventure</option>
+            <option value="Africa Wild">Africa Wild</option>
+            <option value="America">America</option>
+            <option value="Asia">Asia</option>
+            <option value="Scandinavia">Scandinavia</option>
+            <option value="Western Europe">Western Europe</option>
+          </select>
+        </li>
+        <li>
+          <select name="duration" id="" class="outline-none py-5 px-5">
+            <option value="duration">Duration</option>
+            <option value="1 Day Tour">1 Day Tour</option>
+            <option value="2-4 Days Tour">2-4 Days Tour</option>
+            <option value="5-7 Days Tour">5-7 Days Tour</option>
+            <option value="7+ Days Tour">7+ Days Tour</option>
+          </select>
+        </li>
+        <li>
+          <a href="javascript:void()" class="inline-block py-5 px-16 success text-white">Search</a>
+        </li>
+      </ul>
+    </div>
+    <div class="absolute success w-[90%] h-[180px] px-5 py-3 top-[90%] left-[5%] rounded-lg">
+      <ul class="flex mt-12 text-white space-x-3">
+        <li class="flex items-center me-2 ms-5">
+          <img src="assets/images/tvicon1.1.png" alt="">
+          <main class="text-center">
+            <h4 class="font-semibold text-md uppercase mb-2">700+ destinations</h4>
+            <p class="text-sm w-[80%] mx-auto">Our expert team handpicked all destinations in this site</p>
+          </main>
+        </li>
+        <li class="flex items-center me-2">
+          <img src="assets/images/tvicon2.1.png" alt="">
+          <main class="text-center">
+            <h4 class="font-semibold text-md uppercase mb-2">BEST PRICE GUARANTEE</h4>
+            <p class="text-sm w-[80%] mx-auto">Price match within 48 hours of order confirmation</p>
+          </main>
+        </li>
+        <li class="flex items-center">
+          <img src="assets/images/tvicon3.png" alt="">
+          <main class="text-center">
+            <h4 class="font-semibold text-md uppercase mb-2">TOP NOTCH SUPPORT</h4>
+            <p class="text-sm w-[80%] mx-auto">We are here to help, before, during, and even after your trip.</p>
+          </main>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- destinations -->
+
+  <section class="mt-52">
+    <div class="container">
+      <main class="text-center mb-10">
+        <h2 class="font-bold text-3xl mb-5">
+          Popular Destinations
+        </h2>
+        <a href="javascript:void()" class="primary">
+          View All Destinations
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </main>
+      <div class="grid grid-cols-6 mb-10">
+        <div class="col-span-4 relative me-10">
+          <img src="assets/images/christopher-czermak-705859-unsplash-1200x567.jpg" alt="" class="rounded-md h-[350px]">
+          <div class="absolute top-5 left-[87%]">
+            <span class="success rounded-sm text-sm py-1 px-2 text-white">3 Tours</span>
+          </div>
+          <!-- <div class="absolute text-white bg-black/50">
+            <h3 class="text-lg font-bold">Western Europe</h3>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
+              blind texts. Separate.</p>
+            <a href="#" class="font-bold tracking-normal">VIEW ALL TOURS</a>
+          </div> -->
+        </div>
+        <div class="col-span-2 relative">
+          <img src="assets/images/shutterstock_791333146-600x600.jpg" alt="" class="rounded-md h-[350px]">
+          <div class="absolute top-5 left-[70%]">
+            <span class="success rounded-sm text-sm py-1 px-2 text-white">3 Tours</span>
+          </div>
+        </div>
+      </div>
+      <div class="grid grid-cols-6">
+        <div class="col-span-2 relative me-10">
+          <img src="assets/images/charles-postiaux-792896-unsplash-600x600.jpg" alt="" class="rounded-md h-[350px]">
+          <div class="absolute top-5 left-[70%]">
+            <span class="success rounded-sm text-sm py-1 px-2 text-white">3 Tours</span>
+          </div>
+        </div>
+        <div class="col-span-2 relative me-10">
+          <img src="assets/images/joseph-barrientos-49318-unsplash-600x600.jpg" alt="" class="rounded-md h-[350px]">
+          <div class="absolute top-5 left-[70%]">
+            <span class="success rounded-sm text-sm py-1 px-2 text-white">3 Tours</span>
+          </div>
+        </div>
+        <div class="col-span-2 relative">
+          <img src="assets/images/shutterstock_1024139929-600x600.jpg" alt="" class="rounded-md h-[350px]">
+          <div class="absolute top-5 left-[70%]">
+            <span class="success rounded-sm text-sm py-1 px-2 text-white">3 Tours</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- tours -->
+
+  <section class="my-16" style="background-image: url('assets/images/title-bg-popular-3.jpg');background-position: top; background-repeat: no-repeat;">
+    <div class="container mt-16">
+      <main class="text-center mb-10">
+        <h2 class="font-bold text-3xl mb-5">
+          Popular Tour
+        </h2>
+        <a href="javascript:void()" class="primary">
+          View All Popular Tour
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </main>
+      <div class="grid lg:grid-cols-3">
+        <div class="col-span-1 shadow-lg rounded-md">
+          <div class="relative">
+            <img src="assets/images/shutterstock_759608542-700x500.jpg" alt="" class="rounded-t-md">
+            <div class="absolute top-[95%] left-5">
+              <span class="success text-sm py-2 px-3 text-white">Best Seller</span>
+            </div>
+          </div>
+          <div class="py-10 px-5">
+            <a href="#" class="flex space-x-2 mb-5">
+              <span class="primary">
+                <i class="fas fa-bolt fa-lg"></i>
+              </span>
+              <h3 class="text-xl font-semibold">
+                Venice, Rome and Milan – 9 Days 8 Nights
+              </h3>
+            </a>
+            <div class="text-[14px] text-gray-400">
+              <i class="fa-solid fa-clock-rotate-left"></i>
+              7 Days
+            </div>
+            <div class="flex justify-between">
+              <div>
+                <span class="text-yellow-500 text-[11px]">
+                  <i class="fas fa-star"></i>
+                </span>
+                <span class="text-yellow-500 text-[11px]">
+                  <i class="fas fa-star"></i>
+                </span>
+                <span class="text-yellow-500 text-[11px]">
+                  <i class="fas fa-star"></i>
+                </span>
+                <span class="text-yellow-500 text-[11px]">
+                  <i class="fas fa-star"></i>
+                </span>
+                <span class="text-yellow-500 text-[11px]">
+                  <i class="fas fa-star"></i>
+                </span>
+                <span class="text-gray-400 text-[12px]">
+                  (1 Review)
+                </span>
+              </div>
+              <div class="text-center">
+                <span class="old-price">
+                  $4,300
+                </span>
+                <span class="primary block font-bold text-2xl">
+                  $3,500
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
+
 </html>
