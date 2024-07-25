@@ -24,9 +24,9 @@
 <body>
   <!-- navbar & topbar -->
   <header>
-    <div class="border-b">
-      <div class="container flex justify-between text-gray-500 text-[14px] py-5 px-10 relative">
-        <span class="h-[1px] w-[82px] bg-gray-200 rotate-90 absolute left-[81.5%]"></span>
+    <div class="border-b hidden lg:block">
+      <div class="container mx-auto max-w-6xl flex justify-between text-gray-500 text-[14px] py-5 px-10 relative">
+        <span class="h-[1px] w-[82px] bg-gray-200 rotate-90 absolute left-[77%]"></span>
         <ul class="flex space-x-5">
           <li>
             <i class="fas fa-phone fa-sm me-2"></i>
@@ -55,7 +55,7 @@
               </a>
             </li>
           </ul>
-          <ul class="flex space-x-4 me-5">
+          <ul class="flex space-x-4">
             <li>
               <a href="#">
                 <i class="fas fa-lock fa-sm me-2"></i>
@@ -72,53 +72,62 @@
         </div>
       </div>
     </div>
-    <nav class="py-1">
-      <div class="container inBetween items-center">
+    <nav class="py-1 sm:pt-3">
+      <!-- Toggle Button -->
+      <div class="container mx-auto flex justify-between items-center relative">
         <div class="logo w-[180px] h-[90px] pb-2">
-          <img src="assets/images/logo-v3.png" alt="" class="w-full h-full object-contain">
+          <img src="assets/images/logo-v3.png" alt="Logo" class="w-full h-full object-contain">
         </div>
-        <ul class="flex items-center me-5 space-x-10 font-semibold text-gray-400 uppercase text-sm">
-          <li class="text-black pb-2 border-b-2">
-            <a href="#">Home</a>
-          </li>
-          <li class="pb-2 hover:border-b-2 hover:text-black">
-            <a href="#">pages</a>
-          </li>
-          <li class="pb-2 hover:border-b-2 hover:text-black">
-            <a href="#">tour list</a>
-          </li>
-          <li class="pb-2 hover:border-b-2 hover:text-black">
-            <a href="#">tour search</a>
-          </li>
-          <li class="pb-2 hover:border-b-2 hover:text-black">
-            <a href="#">destinations</a>
-          </li>
-          <li class="pb-2 hover:border-b-2 hover:text-black">
-            <a href="#">date & pricing</a>
-          </li>
-          <li class="pb-2 hover:border-b-2 hover:text-black">
-            <a href="#">Blog</a>
-          </li>
-          <li class="pb-2 text-black">
-            <i class="fas fa-search"></i>
-          </li>
-        </ul>
+        <button id="menu-toggle" class="lg:hidden text-gray-600 focus:outline-none border-2 border-gray-500 px-2 py-1 rounded-md">
+            <i class="fas fa-bars fa-lg"></i>
+        </button>
+      
+          <!-- Navigation Menu -->
+          <ul id="menu" class="hidden lg:flex flex-col lg:flex-row lg:items-center lg:space-x-10 space-y-2 lg:space-y-0 font-semibold text-gray-400 uppercase text-sm w-64 lg:w-auto bg-white lg:bg-transparent">
+              <li class="lg:text-black pb-2 lg:border-b-0 lg:pb-0 lg:pl-0 pl-4">
+                  <a href="#">Home</a>
+              </li>
+              <li class="pb-2 hover:border-b-2 hover:text-black lg:pb-0 lg:pl-0 pl-4">
+                  <a href="#">Pages</a>
+              </li>
+              <li class="pb-2 hover:border-b-2 hover:text-black lg:pb-0 lg:pl-0 pl-4">
+                  <a href="#">Tour List</a>
+              </li>
+              <li class="pb-2 hover:border-b-2 hover:text-black lg:pb-0 lg:pl-0 pl-4">
+                  <a href="#">Tour Search</a>
+              </li>
+              <li class="pb-2 hover:border-b-2 hover:text-black lg:pb-0 lg:pl-0 pl-4">
+                  <a href="#">Destinations</a>
+              </li>
+              <li class="pb-2 hover:border-b-2 hover:text-black lg:pb-0 lg:pl-0 pl-4">
+                  <a href="#">Date & Pricing</a>
+              </li>
+              <li class="pb-2 hover:border-b-2 hover:text-black lg:pb-0 lg:pl-0 pl-4">
+                  <a href="#">Blog</a>
+              </li>
+              <li class="pb-2 text-black lg:pb-0 lg:pl-0 pl-4">
+                  <a href="#" aria-label="Search">
+                      <i class="fas fa-search"></i>
+                  </a>
+              </li>
+          </ul>
+  
       </div>
     </nav>
   </header>
   <!-- banner & its content -->
-  <section class="w-full h-[500px] relative"
-    style="background-image: url('assets/images/bgtravel.jpg');background-size: cover;background-repeat: no-repeat;background-attachment: fixed;">
+  <section class="sm:w-full h-[500px] relative sm:bg-left"
+    style="background-image: url('assets/images/sl-4.jpg');background-size: cover;background-repeat: no-repeat;background-attachment: fixed;">
     <div class="absolute text-center top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2">
       <h1 class="text-white uppercase text-5xl font-bold mb-5 tracking-wider">find next place to visit</h1>
       <p class="text-white uppercase text-lg font-medium mb-14 tracking-wider">discover amazing places at exclusive
         deals</p>
       <ul class="flex space-x-1">
         <li>
-          <input type="text" placeholder="Keywords" class="py-5 px-3">
+          <input type="text" placeholder="Keywords" class="py-5 lg:px-3 px-1 text-center">
         </li>
         <li>
-          <select name="destination_for_travel" id="" class="outline-none py-5 px-5">
+          <select name="destination_for_travel" id="" class="outline-none py-5 lg:px-5 px-1">
             <option value="Destination">Destination</option>
             <option value="Africa Adventure">Africa Adventure</option>
             <option value="Africa Wild">Africa Wild</option>
@@ -129,7 +138,7 @@
           </select>
         </li>
         <li>
-          <select name="duration" id="" class="outline-none py-5 px-5">
+          <select name="duration" id="" class="outline-none py-5 lg:px-5 px-1">
             <option value="duration">Duration</option>
             <option value="1 Day Tour">1 Day Tour</option>
             <option value="2-4 Days Tour">2-4 Days Tour</option>
@@ -138,11 +147,11 @@
           </select>
         </li>
         <li>
-          <a href="javascript:void()" class="inline-block py-5 px-16 success text-white">Search</a>
+          <a href="javascript:void()" class="lg:inline-block block py-5 lg:px-16 px-8 success text-white">Search</a>
         </li>
       </ul>
     </div>
-    <div class="absolute success w-[90%] h-[180px] px-5 top-[90%] left-[5%] rounded-lg">
+    <div class="hidden lg:block absolute container mx-auto success w-[90%] h-[180px] px-5 top-[90%] left-1/2 -translate-x-1/2 rounded-lg">
       <ul class="flex mt-12 text-white space-x-3">
         <li class="flex items-center me-2 ms-5">
           <img src="assets/images/tvicon1.1.png" alt="">
@@ -172,7 +181,7 @@
   <!-- destinations -->
 
   <section class="mt-52">
-    <div class="container pr-[50px]">
+    <div class="container pr-[50px] mx-auto">
       <main class="text-center mb-10">
         <h2 class="font-bold text-3xl mb-5">
           Popular Destinations
@@ -182,42 +191,36 @@
           <i class="fas fa-arrow-right"></i>
         </a>
       </main>
-      <div class="grid grid-cols-6 mb-10">
-        <div class="col-span-4 relative me-10">
-          <img src="assets/images/christopher-czermak-705859-unsplash-1200x567.jpg" alt="" class="rounded-md h-[350px]">
+      <div class="grid lg:grid-cols-6 mb-10 md:mb-5">
+        <div class="lg:col-span-4 lg:w-[95%] sm:w-[75%] md:w-full md:mb-5 relative me-10">
+          <img src="assets/images/jal-mahal-jaipur-tour.jpg" alt="" class="rounded-md lg:h-[350px] w-full object-cover">
           <div class="absolute top-5 left-[87%]">
             <span class="success rounded-sm text-sm py-1 px-2 text-white">3 Tours</span>
           </div>
-          <!-- <div class="absolute text-white bg-black/50">
-            <h3 class="text-lg font-bold">Western Europe</h3>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
-              blind texts. Separate.</p>
-            <a href="#" class="font-bold tracking-normal">VIEW ALL TOURS</a>
-          </div> -->
         </div>
-        <div class="col-span-2 relative">
-          <img src="assets/images/shutterstock_791333146-600x600.jpg" alt="" class="rounded-md h-[350px]">
-          <div class="absolute top-5 left-[70%]">
+        <div class="lg:col-span-2 lg:w-[90%] sm:w-[75%] md:w-[90%] relative">
+          <img src="assets/images/bengal2.webp" alt="" class="rounded-md lg:h-[350px] object-cover w-[90%]">
+          <div class="absolute top-5 sm:left-[75%] lg:left-[65%]">
             <span class="success rounded-sm text-sm py-1 px-2 text-white">3 Tours</span>
           </div>
         </div>
       </div>
-      <div class="grid grid-cols-6">
-        <div class="col-span-2 relative me-10">
-          <img src="assets/images/charles-postiaux-792896-unsplash-600x600.jpg" alt="" class="rounded-md h-[350px]">
-          <div class="absolute top-5 left-[70%]">
+      <div class="grid lg:grid-cols-6">
+        <div class="lg:col-span-2 lg:w-[90%] sm:w-full relative md:mb-5 md:w-full me-10">
+          <img src="assets/images/north.webp" alt="" class="rounded-md lg:h-[350px]">
+          <div class="absolute top-5 left-[70%] md:left-[75%]">
             <span class="success rounded-sm text-sm py-1 px-2 text-white">3 Tours</span>
           </div>
         </div>
-        <div class="col-span-2 relative me-10">
-          <img src="assets/images/joseph-barrientos-49318-unsplash-600x600.jpg" alt="" class="rounded-md h-[350px]">
-          <div class="absolute top-5 left-[70%]">
+        <div class="lg:col-span-2 lg:w-[90%] sm:w-full md:mb-5 md:w-full relative me-10">
+          <img src="assets/images/WhatsApp Image 2023-08-20 at 7.56.49 PM.jpeg" alt="" class="rounded-md lg:h-[350px] w-full">
+          <div class="absolute top-5 left-[70%] md:left-[75%]">
             <span class="success rounded-sm text-sm py-1 px-2 text-white">3 Tours</span>
           </div>
         </div>
-        <div class="col-span-2 relative">
-          <img src="assets/images/shutterstock_1024139929-600x600.jpg" alt="" class="rounded-md h-[350px]">
-          <div class="absolute top-5 left-[70%]">
+        <div class="lg:col-span-2 lg:w-[90%] sm:w-full relative">
+          <img src="assets/images/ne.jpg" alt="" class="rounded-md md:w-full lg:h-[350px] object-cover lg:w-[90%]">
+          <div class="absolute top-5 left-[70%] lg:left-[65%]">
             <span class="success rounded-sm text-sm py-1 px-2 text-white">3 Tours</span>
           </div>
         </div>
@@ -229,7 +232,7 @@
 
   <section class="my-16 py-10"
     style="background-image: url('assets/images/title-bg-popular-3.jpg');background-position: top; background-repeat: no-repeat;">
-    <div class="container pr-[40px]">
+    <div class="container pr-[40px] mx-auto">
       <main class="text-center mb-16">
         <h2 class="font-bold text-3xl mb-5">
           Popular Tour
@@ -240,9 +243,9 @@
         </a>
       </main>
       <div class="grid lg:grid-cols-3">
-        <div class="col-span-1 shadow-lg rounded-md me-10">
+        <div class="col-span-1 w-[75%] lg:w-[90%] shadow-lg rounded-md me-10 md:mb-5">
           <div class="relative">
-            <img src="assets/images/shutterstock_759608542-700x500.jpg" alt="" class="rounded-t-md">
+            <img src="https://www.ghumindiaghum.com/images/Package/QgBvltXmii/kolkata2.jpg" alt="" class="rounded-t-md lg:h-[295px]">
             <div class="absolute top-[95%] left-5">
               <span class="success text-sm py-2 px-3 text-white">Best Seller</span>
             </div>
@@ -253,7 +256,7 @@
                 <i class="fas fa-bolt fa-lg"></i>
               </span>
               <h3 class="text-xl font-semibold">
-                Venice, Rome and Milan – 9 Days 8 Nights
+                Kolkata Tour Package 4 Days
               </h3>
             </a>
             <div class="text-[14px] text-gray-400">
@@ -283,18 +286,20 @@
               </div>
               <div class="text-center">
                 <span class="old-price">
-                  $4,300
+                  <i class="fas fa-indian-rupee"></i>
+                  7,500
                 </span>
                 <span class="primary block font-bold text-2xl">
-                  $3,500
+                  <i class="fas fa-indian-rupee"></i>
+                  6,000
                 </span>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-span-1 shadow-lg rounded-md me-10">
+        <div class="col-span-1 w-[75%] lg:w-[90%] shadow-lg rounded-md me-10 md:mb-5">
           <div class="relative">
-            <img src="assets/images/shutterstock_772769227-700x500.jpg" alt="" class="rounded-t-md">
+            <img src="https://www.ghumindiaghum.com/images/Package/RXXxpeTYG7/WhatsApp%20Image%202023-12-23%20at%208.35.56%20PM.jpeg" alt="" class="rounded-t-md lg:h-[292px]">
             <div class="absolute top-[95%] left-5">
               <span class="success text-sm py-2 px-3 text-white">Best Seller</span>
             </div>
@@ -305,7 +310,7 @@
                 <i class="fas fa-bolt fa-lg"></i>
               </span>
               <h3 class="text-xl font-semibold">
-                Enquiry Form Only - Paris - 6 Days
+                Glints of Odhisa Tour Package 3 Days
               </h3>
             </a>
             <div class="text-[14px] text-gray-400">
@@ -335,18 +340,20 @@
               </div>
               <div class="text-center">
                 <span class="old-price">
-                  $3,700
+                  <i class="fas fa-indian-rupee"></i>
+                  4,500
                 </span>
                 <span class="primary block font-bold text-2xl">
-                  $2,000
+                  <i class="fas fa-indian-rupee"></i>
+                  3,000
                 </span>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-span-1 shadow-lg rounded-md me-10">
+        <div class="col-span-1 w-[75%] lg:w-[90%] shadow-lg rounded-md me-10">
           <div class="relative">
-            <img src="assets/images/shutterstock_647526577-700x500.jpg" alt="" class="rounded-t-md">
+            <img src="https://www.ghumindiaghum.com/images/Package/xSTzrjqlGB/Kanyakumari%20tour%204.jpeg" alt="" class="rounded-t-md lg:h-[295px] object-cover">
             <div class="absolute top-[95%] left-5">
               <span class="success text-sm py-2 px-3 text-white">Best Seller</span>
             </div>
@@ -356,8 +363,8 @@
               <span class="primary">
                 <i class="fas fa-bolt fa-lg"></i>
               </span>
-              <h3 class="text-[19px] font-semibold leading-6">
-                Two Capitals Tour of 7 days and 6 nights From Moscow
+              <h3 class="text-[19px] font-semibold">
+                Golden Triangle with Complete South India Tour
               </h3>
             </a>
             <div class="text-[14px] text-gray-400">
@@ -387,10 +394,12 @@
               </div>
               <div class="text-center">
                 <span class="old-price">
-                  $3,800
+                  <i class="fas fa-indian-rupee"></i>
+                   59,999
                 </span>
                 <span class="primary block font-bold text-2xl">
-                  $3,500
+                  <i class="fas fa-indian-rupee"></i>
+                    44,999
                 </span>
               </div>
             </div>
@@ -403,9 +412,9 @@
   <!-- camel image -->
 
   <section class="my-10">
-    <div class="container">
+    <div class="container mx-auto pr-8">
       <div class="grid lg:grid-cols-2">
-        <div class="col-span-1 bg-[#ff390899] relative rounded-l-md h-[350px]">
+        <div class="col-span-1 w-[75%] lg:w-full bg-[#ff390899] relative lg:asrounded-l-md h-[350px]">
           <div class="absolute text-center top-[55%] left-1/2 -translate-x-1/2 -translate-y-1/2 px-16 py-5">
             <main class="mb-10">
               <h4 class="text-gray-100 text-xl font-bold mb-3 ">
@@ -423,8 +432,8 @@
             </p>
           </div>
         </div>
-        <div class="col-span-1">
-          <img src="assets/images/recommended.jpg" alt="" class="rounded-r-md h-[350px] w-[560px]">
+        <div class="col-span-1 w-[83%] lg:w-full">
+          <img src="assets/images/recommended.jpg" alt="" class="lg:rounded-r-md h-[350px] w-[90%] object-cover">
         </div>
       </div>
     </div>
@@ -433,7 +442,7 @@
   <!-- our recommendation -->
   <section class="my-14 py-10"
     style="background-image: url('assets/images/title-bg-recommended-1.jpg'); background-position-x: 50%; background-repeat: no-repeat;">
-    <div class="container pr-[40px]">
+    <div class="container pr-[40px] mx-auto">
       <main class="text-center mb-16">
         <h2 class="font-bold text-3xl mb-5">
           Our Recommended
@@ -444,13 +453,13 @@
         </a>
       </main>
       <div class="grid lg:grid-cols-3">
-        <div class="col-span-1 shadow-lg rounded-md me-10">
+        <div class="col-span-1 w-[75%] lg:w-[90%] shadow-lg rounded-md me-10 md:mt-5">
           <div>
-            <img src="assets/images/braden-jarvis-383867-unsplash-700x500.jpg" alt="" class="rounded-t-md">
+            <img src="https://www.ghumindiaghum.com/images/Package/teLKYDZ46v/nanital1.jpg" alt="" class="rounded-t-md lg:h-[290px]">
           </div>
-          <div class="py-10 px-4">
+          <div class="py-10 px-4 container">
             <h3 class="text-lg mb-5 font-bold ">
-              5-Day Oahu Tour: Honolulu, Pearl Harbor, & Diamond Head
+              Nainital, Corbett, Mussoorie Tour
             </h3>
             <div class="text-[14px] text-gray-400">
               <i class="fa-solid fa-clock-rotate-left"></i>
@@ -482,23 +491,24 @@
                   From
                 </span>
                 <span class="primary block font-bold text-2xl">
-                  $1,500
+                  <i class="fas fa-indian-rupee"></i>
+                  11,999
                 </span>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-span-1 shadow-lg rounded-md me-10">
+        <div class="col-span-1 w-[75%] lg:w-[90%] shadow-lg rounded-md me-10 md:mt-5">
           <div>
-            <img src="assets/images/shutterstock_465949868-700x500.jpg" alt="" class="">
+            <img src="https://www.ghumindiaghum.com/images/Package/bNxtywXMMZ/kerela.jpg" alt="" class="rounded-t-md lg:h-[290px]">
           </div>
           <div class="py-10 px-4">
             <h3 class="text-lg mb-5 font-bold ">
-              Molokini and Turtle Arches Snorkeling Trip
+              Golden Triangle with Kerala
             </h3>
             <div class="text-[14px] text-gray-400">
               <i class="fa-solid fa-clock-rotate-left"></i>
-              4 Hours
+              7 Days
             </div>
             <div class="flex justify-between">
               <div>
@@ -526,24 +536,22 @@
                   From
                 </span>
                 <span class="primary block font-bold text-2xl">
-                  $80
+                  <i class="fas fa-indian-rupee"></i>
+                  22,999
                 </span>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-span-1 shadow-lg rounded-md me-10">
+        <div class="col-span-1 w-[75%] lg:w-[90%] shadow-lg rounded-md me-10 md:mt-5">
           <div class="relative">
-            <img src="assets/images/shutterstock_743964940-700x500.jpg" alt="" class="rounded-t-md">
-            <div class="absolute top-[95%] left-5">
-              <span class="success text-sm py-2 px-3 text-white">Best Seller</span>
-            </div>
+            <img src="assets/images/Kerala tourism pics 3.jpeg" alt="" class="rounded-t-md lg:h-[290px] object-cover">
           </div>
           <div class="py-10 px-4">
             <a href="#" class="flex space-x-2">
               <span class="primary"><i class="fas fa-bolt"></i></span>
               <h3 class="text-lg mb-5 font-bold">
-                5-Day Oahu Tour: Honolulu, Pearl Harbor, & Diamond Head
+                Palm and Backwater
               </h3>
             </a>
             <div class="text-[14px] text-gray-400">
@@ -572,11 +580,12 @@
                 </span>
               </div>
               <div class="text-center">
-                <span class="old-price">
-                  $4000
+                <span class="text-gray-300 text-sm">
+                  From
                 </span>
                 <span class="primary block font-bold text-2xl">
-                  $5,000
+                  <i class="fas fa-indian-rupee"></i>
+                  22,999
                 </span>
               </div>
             </div>
@@ -588,9 +597,9 @@
 
   <!-- traveling highlights -->
 
-  <section class="h-[100vh] my-10"
-    style="background-image: url('assets/images/bgtravel2.jpg');background-position: center; background-size: cover; background-repeat: no-repeat;background-attachment: fixed;">
-    <div class="container relative h-full">
+  <section class="lg:h-[90vh] h-[50vh] my-10"
+    style="background-image: url('https://images.unsplash.com/photo-1672812406880-34f88390890c?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dGFqJTIwbWFoYWwlMjBhZ3JhJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D');background-position: center; background-size: cover; background-repeat: no-repeat;background-attachment: fixed; filter: brightness(90%); z-index: 0;">
+    <div class="container relative h-full mx-auto">
       <div class="absolute text-center left-[30%] top-[40%]">
         <h1 class="text-5xl text-white font-bold mb-8 tracking-wide">Traveling Highlights</h1>
         <h4 class="primary font-bold text-2xl mb-8">Your New Traveling Idea</h4>
@@ -604,9 +613,9 @@
   <!-- testimonials -->
   <section class="py-14 px-14 my-10"
     style="background-image: url('assets/images/title-bg-testimonial-2.jpg');background-position: top; background-repeat: no-repeat;">
-    <div class="container pr-[50px] relative">
+    <div class="container pr-[50px] relative mx-auto text-center">
       <h3 class="text-3xl font-bold tracking-wide text-center mb-16">Customer Reviews</h3>
-      <div class="flex absolute top-12 left-[88%] space-x-2">
+      <div class="flex absolute top-12 left-[80%] lg:left-[87%] space-x-2">
         <button class="testimonial_prev px-2 py-1 bg-blue-950 text-white transition-all duration-500 hover:success"><i
             class="fas fa-chevron-left"></i></button>
         <button class="testimonial_next px-2 py-1  bg-blue-950 text-white transition-all duration-500 hover:success"><i
@@ -616,16 +625,15 @@
         <div class="h-[350px] w-[300px] bg-[#ff390899] p-5 text-white rounded-sm">
           <sup><i class="fas fa-quote-left fa-xl ms-5"></i></sup>
           <p class="text-[14px] leading-8 py-2 text-center">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium modi iste rem voluptatem quaerat
-            quibusdam similique quidem est beatae exercitationem?
+            Hamari yatra amazing thi! Best service aur shandar experience. Tour guide bahut helpful aur knowledgeable the. Humne har pal enjoy kiya aur yeh trip hamesha yaad rahegi. Dhanyavaad!
           </p>
           <div class="gc-2">
             <div class="col-span-1 h-[70px] w-[70px]">
-              <img src="assets/images/photo-1428931996691-a5108d4cdbf5-150x150.jpg" alt=""
+              <img src="assets/images/1651857571624.jpeg" alt=""
                 class="rounded-full h-full w-full">
             </div>
             <div class="col-span-1">
-              <h4 class="font-semibold uppercase text-[15px]">luaka smith</h4>
+              <h4 class="font-semibold uppercase text-[15px]">Vijay Shekhar</h4>
               <div>
                 <span class="text-yellow-500 text-[11px]">
                   <i class="fas fa-star"></i>
@@ -650,15 +658,14 @@
         <div class="h-[350px] w-[300px] bg-[#ff390899] p-5 text-white rounded-sm">
           <sup><i class="fas fa-quote-left fa-xl ms-5"></i></sup>
           <p class="text-[14px] leading-8 py-2 text-center">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium modi iste rem voluptatem quaerat
-            quibusdam similique quidem est beatae exercitationem?
+            Aapke saath travel karna bahut sukhad raha. Guide bahut jaanakar aur helpful the. Sab kuch well-organized tha aur humari expectations se zyada tha. Phir se travel karenge.
           </p>
           <div class="gc-2">
             <div class="col-span-1 h-[70px] w-[70px]">
-              <img src="assets/images/shutterstock_666258808-150x150.jpg" alt="" class="rounded-full h-full w-full">
+              <img src="assets/images/south-indian-girl-with-long-black-hair-is-standing-crowd_905085-76.avif" alt="" class="rounded-full h-full w-full">
             </div>
             <div class="col-span-1">
-              <h4 class="font-semibold uppercase text-[15px]">jane doe</h4>
+              <h4 class="font-semibold uppercase text-[15px]">Dia Gupta</h4>
               <div>
                 <span class="text-yellow-500 text-[11px]">
                   <i class="fas fa-star"></i>
@@ -683,15 +690,14 @@
         <div class="h-[350px] w-[300px] bg-[#ff390899] p-5 text-white rounded-sm">
           <sup><i class="fas fa-quote-left fa-xl ms-5"></i></sup>
           <p class="text-[14px] leading-8 py-2 text-center">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium modi iste rem voluptatem quaerat
-            quibusdam similique quidem est beatae exercitationem?
+            Tourist spots bahut khoobsurat the aur sabhi zaruraton ka achhe se dhyan rakha gaya. Shandar experience tha aur humne bahut enjoy kiya. Aapki services recommend karenge.
           </p>
           <div class="gc-2">
             <div class="col-span-1 h-[70px] w-[70px]">
-              <img src="assets/images/psinfinite2-150x150.jpg" alt="" class="rounded-full h-full w-full">
+              <img src="assets/images/istockphoto-1367122581-612x612.jpg" alt="" class="rounded-full h-full w-full object-cover">
             </div>
             <div class="col-span-1">
-              <h4 class="font-semibold uppercase text-[15px]">luaka smith</h4>
+              <h4 class="font-semibold uppercase text-[15px]">RJ Shiva</h4>
               <div>
                 <span class="text-yellow-500 text-[11px]">
                   <i class="fas fa-star"></i>
@@ -720,8 +726,8 @@
   <!-- newsletter section -->
 
   <section class="bg-gray-100 my-16 py-24">
-    <div class="container">
-      <div class="grid grid-cols-2 space-x-28">
+    <div class="container mx-auto">
+      <div class="grid lg:grid-cols-2 space-x-28 md:space-y-10">
         <div class="col-span-1">
           <h3 class="text-3xl font-bold tracking-wide mb-5">Browse Tour By Category</h3>
           <div class="flex justify-between me-10">
@@ -816,7 +822,7 @@
 
   <section class="py-10"
     style="background-image: url('assets/images/title-bg-articles.jpg');background-position: top; background-repeat: no-repeat;">
-    <div class="container">
+    <div class="container pr-[35px] mx-auto">
       <main class="text-center mb-16">
         <h2 class="font-bold text-3xl mb-5">
           Recent Articles
@@ -826,12 +832,12 @@
           <i class="fas fa-arrow-right"></i>
         </a>
       </main>
-      <div class="grid grid-cols-3">
+      <div class="grid lg:grid-cols-3">
         <div
-          class="relative h-[450px] w-[375px] text-white overflow-hidden hover:bg-orange-700/60 transition-all duration-300 hover:scale-105">
+          class="relative h-[90%] w-[90%] text-white overflow-hidden hover:bg-orange-700/60 transition-all duration-300 hover:scale-105">
           <div class="absolute inset-0 z-0 bg-orange-600/30 transition-all duration-300 hover:bg-orange-700/60"></div>
           <img src="assets/images/shutterstock_195507533-600x700.jpg" alt=""
-            class="h-full w-full object-cover transition-all duration-300">
+            class="h-full w-full object-cover">
           <div class="absolute bottom-14 z-10 left-10">
             <a href="#" class="text-xl font-semibold text-white tracking-wide">
               How to travel with paper map
@@ -840,17 +846,17 @@
               <a href="#" class="text-[14px] block me-2">June 6, 2016</a>
               <span class="inline-block transform scale-150">&middot;</span> <!-- Scaled middle dot -->
               <a href="#" class="text-[14px]">
-                John Smith
+                Vikas Pal
               </a>
             </div>
           </div>
         </div>
         <div
-          class="relative h-[450px] w-[375px] text-white overflow-hidden hover:bg-orange-700/60 transition-all duration-300 hover:scale-105">
+          class="relative h-[90%] w-[90%] text-white overflow-hidden hover:bg-orange-700/60 transition-all duration-300 hover:scale-105">
           <div class="absolute inset-0 z-0 bg-orange-600/30 transition-all duration-300 hover:bg-orange-700/60"></div>
           <img src="assets/images/photo-1459255418679-d6424da9ee33-600x700.jpg" alt=""
-            class="h-full w-full object-cover transition-all duration-300">
-          <div class="absolute bottom-14 z-10 left-10">
+            class="h-full w-full object-cover">
+          <div class="absolute bottom-14 z-10 left-6">
             <a href="#" class="text-xl font-semibold text-white tracking-wide">
               Change your place and get the fresh air
             </a>
@@ -858,16 +864,16 @@
               <a href="#" class="text-[14px] block me-2">June 6, 2016</a>
               <span class="inline-block transform scale-150">&middot;</span> <!-- Scaled middle dot -->
               <a href="#" class="text-[14px]">
-                John Smith
+                Smriti Devi
               </a>
             </div>
           </div>
         </div>
         <div
-          class="relative h-[450px] w-[375px] text-white overflow-hidden hover:bg-orange-700/60 transition-all duration-300 hover:scale-105">
+          class="relative h-[90%] w-[90%] text-white overflow-hidden hover:bg-orange-700/60 transition-all duration-300 hover:scale-105">
           <div class="absolute inset-0 z-0 bg-orange-600/30 transition-all duration-300 hover:bg-orange-700/60"></div>
           <img src="assets/images/shutterstock_166193831-600x700.jpg" alt=""
-            class="h-full w-full object-cover transition-all duration-300">
+            class="h-full w-full object-cover">
           <div class="absolute bottom-14 z-10 left-10">
             <a href="#" class="text-xl font-semibold text-white tracking-wide">
               Pityful a rethoric question ran
@@ -876,7 +882,7 @@
               <a href="#" class="text-[14px] block me-2">June 6, 2016</a>
               <span class="inline-block transform scale-150">&middot;</span> <!-- Scaled middle dot -->
               <a href="#" class="text-[14px]">
-                John Smith
+                Shiv Dashani
               </a>
             </div>
           </div>
@@ -888,7 +894,7 @@
   <!-- featured with -->
 
   <section class="py-10">
-    <div class="container">
+    <div class="container mx-auto">
       <main class="text-center mb-10">
         <h2 class="font-bold text-3xl mb-4">
           We are featured in
@@ -897,7 +903,7 @@
             See what others are saying about us
           </p>
       </main>
-      <div class="grid grid-cols-5">
+      <div class="lg:grid flex flex-wrap lg:grid-cols-5">
           <div class="col-span-1 w-[205px] h-[88px]">
             <img src="assets/images/banner-1.png" alt="" class="w-full h-full">
           </div>
@@ -920,8 +926,8 @@
   <!-- footer -->
 
   <footer class="py-20 mt-10 bg-gray-900 relative">
-    <div class="container">
-      <div class="grid grid-cols-4">
+    <div class="container mx-auto">
+      <div class="grid lg:grid-cols-4">
         <div class="col-span-1">
           <ul class="text-white text-lg">
             <li class="mb-5">
@@ -992,8 +998,8 @@
       </div>
     </div>
     <div class="footer-bottom bg-black py-4 mt-10  absolute w-full">
-      <div class="container">
-        <div class="flex justify-between text-gray-500">
+      <div class="container mx-auto ">
+        <div class="flex justify-between sm:w-[90%] text-gray-500">
           <p>
             &copy; 2024 Travel Tour All Rights Reserved.
           </p>

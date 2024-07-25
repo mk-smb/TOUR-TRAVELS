@@ -7,10 +7,10 @@
         font-family: "Poppins", sans-serif;
       }
     /* custom css */
-    .container{
-        padding-right: 10px !important;
-        padding-left: 50px !important;
+    .menu-open {
+        display: block;
     }
+
     .main{
         @apply container mx-auto;
     }
